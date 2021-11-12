@@ -1,9 +1,22 @@
+@import './typo.scss';
+
+* {  
+  font-family: 'AvenirNextCyr';
+}
+
 body{
- margin: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  
 }
 
 button{
   padding: 0;
   border: none;
   background-color: transparent;
+}
+
+a{
+  text-decoration: none;
 }

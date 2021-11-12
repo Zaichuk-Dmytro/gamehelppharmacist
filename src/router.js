@@ -11,8 +11,8 @@ const routes = [
   },
   {
     path: '/game',
-    name: 'game',
-    component: () => import('./components/game.vue'),
+    name: 'pageGame',
+    component: () => import('./pages/PageGame.vue'),
   },
 ]
 
