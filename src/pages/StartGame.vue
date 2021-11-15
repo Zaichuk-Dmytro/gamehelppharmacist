@@ -8,9 +8,16 @@
         
       </div>
       <div class="circle__link">
-        <router-link to="game">
-          <button class="circle__link-btn">Начать</button>
+        <router-link to="game-page">
+          <custom-btn class="circle__link-btn">
+            Начать
+          </custom-btn>
         </router-link>
+        <!-- <router-link to="results-page">
+          <custom-btn class="circle__link-btn">
+            results
+          </custom-btn>
+        </router-link> -->
       </div>
     </div>
   </div>
@@ -81,8 +88,6 @@ export default {
           font-size: 2.50vw;
           line-height: 3.06vw;
           color: #8E9AD5;  
-          background-color: #fff;     
-          border-radius: 100px;   
         }
       }
     }

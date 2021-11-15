@@ -10,9 +10,14 @@ const routes = [
     component: () => import('./pages/StartGame.vue'),   
   },
   {
-    path: '/game',
-    name: 'pageGame',
-    component: () => import('./pages/PageGame.vue'),
+    path: '/game-page',
+    name: 'game-page',
+    component: () => import('./pages/GamePage.vue'),
+  },
+  {
+    path: '/results-page',
+    name: 'results-page',
+    component: () => import('./pages/ResultsPage.vue'),
   },
 ]
 

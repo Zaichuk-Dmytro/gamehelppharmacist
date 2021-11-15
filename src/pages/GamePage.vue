@@ -1,6 +1,6 @@
 <template>
-  <div class="page-game">
-    <div class="page-game__aside aside">
+  <div class="game-page">
+    <div class="game-page__aside aside">
       <div class="aside__wrapper">
         <div class="aside__nav-btn">
           <div class="aside__nav-btn-wrapper">
@@ -40,14 +40,15 @@
         </div>
       </div>
     </div>
-    <div class="page-game__field">
+    <div class="game-page__field">
       <clients-card class="client-card" :client="currentClient"/>   
       <div class="test">
           <custom-btn
             class="medicines-btn"
             v-for="(item, index) in currentClient.medicines"
             :key="index"
-            :background="backgroundBtn(index)"            
+            :background="backgroundBtn(index)"
+            @click="countplus"    
           >
             {{item.name}}
           </custom-btn>
@@ -58,7 +59,7 @@
 
 <script>
 export default {
-  name: 'page-game',
+  name: 'game-page',
   data: () => ({
     clients: [],
     clientIndex: 0,
@@ -67,6 +68,7 @@ export default {
     this.clients = await this.$store.dispatch('clientsApi')
   },
   computed: {
+    
     currentClient() {
       return this.clients[this.clientIndex] || {}     
     },
@@ -86,16 +88,20 @@ export default {
       } else {
         return 'yellow'
       }
-    }
+    },
+    countplus() {
+      console.log(this.clientIndex)
+      this.clientIndex++
+    },
   }
 }
 </script>
 
 <style lang="scss" scoped>
-  .page-game{
+  .game-page{
     display: flex;
 
-    .page-game__aside{
+    .game-page__aside{
       position: relative;
       width: 32.64vw;
       height: 100vh;
@@ -178,7 +184,7 @@ export default {
       }
     }
 
-    .page-game__field{
+    .game-page__field{
       display: flex;
       flex-grow: 1;
       justify-content: space-around;

@@ -1,5 +1,8 @@
 <template>
-  <div :class="['medicine-btn', 'medicine-btn_background_' + background, 'medicine-btn_color_' + color,]" >
+  <div 
+    :class="['medicine-btn', 'medicine-btn_background_' + background, 'medicine-btn_color_' + color,]"
+    @click="$emit('click' )"
+  >
     <slot></slot>
   </div>
 </template>
@@ -30,6 +33,7 @@ export default {
     font-size: 1.94vw;
     line-height: 34px;
     color: #FFFFFF;
+    background: #fff;
     border-radius: 100px;    
 
     &_background_blue {

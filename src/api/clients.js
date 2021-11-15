@@ -27,8 +27,8 @@ export default [
     img: 'Lyubov.png',
     request: 'Лікар призначив препарат від артеріальної гіпертензії, а бренд дорого коштує. Тому мені потрібен аналог з хорошою ефективністю та приємною ціною.',
     medicines: [
-      {name: 'Препарат 1', value: 'HAPPY'},
-      {name: 'Препарат 2', value: 'UNHAPPY'},
+      {name: 'Препарат 1', value: 'UNHAPPY'},
+      {name: 'Препарат 2', value: 'HAPPY'},
       {name: 'Препарат 3', value: 'HEART'},
     ],
   },
@@ -38,9 +38,9 @@ export default [
     img: 'Sasha.png',
     request: 'Порекомендуйте ефективний препарат від болю в горлі за розумну ціну.',
     medicines: [
-      {name: 'Препарат 1', value: 'HEART'},
+      {name: 'Препарат 1', value: 'UNHAPPY'},
       {name: 'Препарат 2', value: 'HAPPY'},
-      {name: 'Препарат 3', value: 'UNHAPPY'},
+      {name: 'Препарат 3', value: 'HEART'},
     ],
   },
   {
@@ -49,9 +49,9 @@ export default [
     img: 'Iryna.png',
     request: 'У мене часто невралгії, лікар призначив вітаміни групи В. Мені потрібен якісний аналог за прийнятною ціною.',
     medicines: [
-      {name: 'Препарат 1', value: 'HAPPY'},
-      {name: 'Препарат 2', value: 'HEART'},
-      {name: 'Препарат 3', value: 'UNHAPPY'},
+      {name: 'Препарат 1', value: 'UNHAPPY'},
+      {name: 'Препарат 2', value: 'HAPPY'},
+      {name: 'Препарат 3', value: 'HEART'},
     ],
   },
   {
