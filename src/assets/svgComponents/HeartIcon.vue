@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: 'heard-icon'
+  name: 'heart-icon'
 }
 </script>
 

@@ -1,14 +1,14 @@
 <template>
   <div class="client-card client">
         <div class="client__photo-wrapper">
-          <img class="client__photo" :src="require(`../assets/img/${clients[0].img}`)">
+          <img v-if="client.img" class="client__photo" :src="require(`../assets/img/${client.img}`)">
         </div>
       <div class="client__desk">
         <div class="client__data">
-          {{clients[5].name}}, {{clients[5].age}}
+          {{client.name}}, {{client.age}}
         </div>
         <div class="client__request">
-          {{clients[5].request}}
+          {{client.request}}
         </div>
       </div>
     </div> 
@@ -18,7 +18,10 @@
 export default {
   name: 'clients-card',
   props: {
-    clients: Object
+    client: {
+      type: Object,
+      default: () => ({})
+    }
   }
 }
 </script>
@@ -30,13 +33,16 @@ export default {
     box-shadow: 0px 0px 40px rgba(127, 127, 127, 0.4);
     border-radius: 40px;
 
-  .client__photo-wrapper{
+  &__photo-wrapper{
     position: relative;
+    width: 100%;
+    height: 24.31vw;  
+    object-fit: cover;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px; 
 
     &::before{
-      content: "";;
+      content: "";
       position: absolute;      
       width: 100%;
       height: 100%;   
@@ -45,28 +51,30 @@ export default {
       opacity: 0.2;      
     }
 
-    .clietn__photo{
+    .client__photo{
+      width: 100%;
+      height: 100%;
       border-radius: inherit;  
+      object-fit: cover;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);   
     }
   }   
-      
+        
     .client__desk{
-      width: 420px;
-      padding-top: 25px;
+      padding: 1.74vw 4.17vw;
 
       .client__data{
-        margin-bottom: 6px;
-        font-size: 32px;
-        line-height: 39px;
+        margin-bottom: 0.42vw;
+        font-size: 2.22vw;
+        line-height: 2.71vw;
         font-weight: bold;
         color: #8E9AD5;          
       }
 
       .client__request{
         font-weight: 300;
-        font-size: 24px;
-        line-height: 29px;
+        font-size: 1.67vw;
+        line-height: 2.01vw;
       }
     }
   }
