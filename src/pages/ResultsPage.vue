@@ -38,7 +38,8 @@
       </custom-btn>
     </div>
     <div class="result-page__img-wrapper">
-      <div class="result-page__img">      
+      <div class="result-page__img"
+      :style="`background: url(${require('../assets/img/result.png')}) no-repeat bottom;`">      
       </div>
     </div>
   </div>
@@ -54,6 +55,9 @@ export default {
   }),
   mounted() {
     this.clientLength = this.$store.getters.clientLength
+    if (!this.clientLength) {
+      this.$router.push('/')     
+    }
     this.result =  this.$store.getters.getResult
     this.medicines = this.$store.getters.getMedicines
     this.medicines.forEach(item => {
@@ -114,7 +118,7 @@ export default {
         max-height: 100vh;
         border-radius: 100%;
 
-        background: url(/img/main.c13ebf55.png) no-repeat bottom;
+        
         background-position: 25% 100%;
         background-size: 67.71vw;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
