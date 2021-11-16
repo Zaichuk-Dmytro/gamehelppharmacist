@@ -5,6 +5,8 @@ import store from './store'
 import mainScss from './styles/main.scss'
 
 Vue.config.productionTip = false
+
+Vue.config.productionTip = false
 const req = require.context('@/components', true, /\.(js|vue)$/i)
 req.keys().map(key => {
   if (!(req(key).default || {}).name) {
@@ -35,4 +37,11 @@ new Vue({
   store,
   mainScss,
   render: (h) => h(App),
+  created() {
+    if (sessionStorage.redirect) {
+      const redirect = sessionStorage.redirect
+      delete sessionStorage.redirect
+      this.$router.push(redirect)
+    }
+  }
 }).$mount('#app')
