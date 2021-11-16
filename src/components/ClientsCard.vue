@@ -31,8 +31,7 @@ export default {
   },
   computed: {
     years() {
-      let age = this.client.age?.slice(-1)
-      debugger
+      let age = this.client.age?.slice(-1)      
       if (age == 1) {
         return 'рік'
       } else if (+age && age < 5) {
