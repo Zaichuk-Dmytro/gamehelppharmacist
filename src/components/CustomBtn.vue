@@ -27,25 +27,32 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+
     width: 100px;
     height: 100px;
+    border-radius: 100px; 
+
+    background: #fff;
+
     font-weight: bold;
     font-size: 1.94vw;
-    line-height: 34px;
     color: #FFFFFF;
-    background: #fff;
-    border-radius: 100px;    
+    line-height: 34px;
 
     &_background_blue {
       background: linear-gradient(266.19deg, #169AE4 0%, #0CC4FA 100%);
     }
+
     &_background_yellow{
       background: linear-gradient(90deg, #FFD748 0.02%, rgba(195, 199, 11, 0.96) 99.97%, #CAC6AB 99.98%, #D3E9E1 99.99%);
     }
+
     &_background_purple{
     background: linear-gradient(266.19deg, #8049C7 0%, #CA57FD 100%);
     }
 
-    
+    &_background_gray{
+      background: linear-gradient(90deg, #D9D9D9 0%, #A1A1A1 100%);
+    }
   }    
 </style>

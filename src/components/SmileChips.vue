@@ -2,7 +2,7 @@
   <div class="smile-chips">
     <component :is="icon"/>
     <div class="smile-chips__count">
-     
+      {{count}}
     </div>
   </div>
 </template>
@@ -12,6 +12,7 @@ export default {
   name: 'smile-chips',
   props: {
     icon: String,
+    count: Number
   }
 }
 </script>
@@ -19,21 +20,25 @@ export default {
 <style lang="scss" scoped>
   .smile-chips{
     display: flex;
-    align-items: center;    
-    width: 190px;
-    height: 80px;
-    padding: 0 10px;
+    align-items: center;
+
+    width: 13.19vw;
+    height: 5.56vw;
+    padding: 0 0.69vw;
+    border-radius: 40px;
+
     background: #FFFFFF;
     box-shadow: 0px 0px 50px rgba(131, 42, 64, 0.4);
-    border-radius: 40px;
+    
 
     .smile-chips__count{
       display: flex;
-      font-weight: bold;
-      font-size: 48px;
-      line-height: 59px;
-      flex-grow: 1;
       justify-content: center;
+      flex-grow: 1;
+
+      font-weight: bold;
+      font-size: 3.33vw;
+      line-height: 4.10vw;      
     }
   }
 </style>

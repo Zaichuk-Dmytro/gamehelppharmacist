@@ -6,7 +6,7 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: '',  
+    name: 'start-page',  
     component: () => import('./pages/StartGame.vue'),   
   },
   {

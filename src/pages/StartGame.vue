@@ -12,12 +12,7 @@
           <custom-btn class="circle__link-btn">
             Начать
           </custom-btn>
-        </router-link>
-        <!-- <router-link to="results-page">
-          <custom-btn class="circle__link-btn">
-            results
-          </custom-btn>
-        </router-link> -->
+        </router-link>        
       </div>
     </div>
   </div>
@@ -31,8 +26,9 @@ export default {
 
 <style lang="scss" scoped>
   .start-game{
-    height: 100%;
     width: 100%;
+    height: 100%;
+    
     background: url('../assets/img/cover.png')  no-repeat;
     background-size: cover; 
 
@@ -43,20 +39,24 @@ export default {
       flex-direction: column;
       justify-content: flex-end;
       align-items: center; 
-      max-width: 100vh;
-      max-height: 100vh;
+
       width: 59.51vw;
-      height: 59.51vw;             
-      margin-left: 110px;      
-      color: #fff;
+      max-width: 100vh;
+      height: 59.51vw; 
+      max-height: 100vh;
+      margin-left: 110px;
       border-radius: 100%;
+
       background: linear-gradient(63.53deg, #2D8550 16.62%, #5E6EC2 83.38%);
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      
+      color: #fff;
     } 
 
     .circle {
       &__subtitle {
         margin-bottom: 29px;
+
         font-weight: 300;
         font-size: 2.43vw;
         line-height: 41px;
@@ -65,10 +65,10 @@ export default {
       }
 
       &__title{
+        font-weight: bold;
         font-size: 4.17vw;
         line-height: 4.58vw;        
-        letter-spacing: 0.02em;
-        font-weight: bold;
+        letter-spacing: 0.02em;        
         
         &_upper{
           text-transform: uppercase;
@@ -82,12 +82,15 @@ export default {
          &-btn{          
           width: 26.39vw;
           height: 6.25vw;
+
           font-family: 'Montserrat';
           font-style: normal;
           font-weight: bold;
           font-size: 2.50vw;
+
+          color: #8E9AD5; 
           line-height: 3.06vw;
-          color: #8E9AD5;  
+           
         }
       }
     }
