@@ -1,10 +1,12 @@
 <template>
-  <div 
+  <button 
     :class="['medicine-btn', 'medicine-btn_background_' + background, 'medicine-btn_color_' + color,]"
+    
+    :disabled="disabled"
     @click="$emit('click' )"
   >
     <slot></slot>
-  </div>
+  </button>
 </template>
 
 <script>
@@ -17,6 +19,9 @@ export default {
     },
     color: {
       type: String,
+    },
+    disabled: {
+      type: Boolean,
     }
   }
 }
@@ -53,6 +58,10 @@ export default {
 
     &_background_gray{
       background: linear-gradient(90deg, #D9D9D9 0%, #A1A1A1 100%);
+    }
+    
+    &[disabled] {
+      opacity: 0.5;
     }
   }    
 </style>

@@ -23,6 +23,7 @@
         class="medicines__btn"
         v-for="(item, index) in medicines"
         :key="index"
+        :disabled="loading"
         :background="backgroundBtn(index)"
         @click="countEvent(index)"           
       >
@@ -40,6 +41,7 @@ export default {
 
   },
   data: () => ({
+    loading: false,
     action: 0,
     topOpacity: '',
     rightOpacity: '',
@@ -108,6 +110,8 @@ export default {
     },
 
     countEvent(index) {
+      this.loading = true
+
       if (index == 0 ) {
         this.onActionLeft()
       } else if (index == 1) {
@@ -235,8 +239,7 @@ export default {
   
     onActionRight() {
       this.action = 2
-      this.transformUi( 1, this.stamp)
-      
+      this.transformUi( 1, this.stamp)      
 
       const that = this
       setTimeout(() => {
@@ -249,7 +252,7 @@ export default {
     onActionTop() {
       this.action = 1
       this.transformUi( 1, this.stamp)
-    
+
       const that = this
       setTimeout(() => {
         that.onSwipeTop()
@@ -271,6 +274,7 @@ export default {
       setTimeout(() => {
         that.transformUi( 1, this.currentElement)
         that.currentElement.classList.add('stackedcards-active') 
+        that.loading = false
       }, 400)
     },
       
