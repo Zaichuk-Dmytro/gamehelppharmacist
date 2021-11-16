@@ -39,7 +39,7 @@
     </div>
     <div class="result-page__img-wrapper">
       <div class="result-page__img"
-      :style="`background: url(${require('../assets/img/result.png')}) no-repeat bottom;`">      
+      :style="`background-image: url(${require('../assets/img/result.png')});`">      
       </div>
     </div>
   </div>
