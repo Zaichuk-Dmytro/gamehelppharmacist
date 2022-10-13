@@ -1,5 +1,6 @@
 <template>
   <div class="game-page">
+  <div class="test__edit" style="display:none;">test</div>
     <div class="game-page__aside aside">
       <div class="aside__wrapper">
         <div class="aside__nav-btn">
